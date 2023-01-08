@@ -1,0 +1,4 @@
+.idea/
+node_modules/
+uploadFiles/
+src/jsonDB/data/*.json

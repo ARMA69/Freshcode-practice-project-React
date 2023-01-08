@@ -1,0 +1,88 @@
+.branservices
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 100vw
+  background-color: rgba(89, 131, 252, 1)
+  background-image: linear-gradient(181deg, rgba(89, 131, 252, 1) 20%, rgba(41, 53, 86, 1) 100%)
+  font-family: Raleway, sans-serif
+  padding-bottom: 50px
+
+  h2
+    color: white
+    padding: 50px 0 20px 0
+    margin: 0
+
+  .description
+    margin-bottom: 20px
+    color: white
+    
+  .brancards
+    width: 1200px 
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-evenly
+
+    @media (max-width: 1199px)
+      width: 1000px
+      display: flex
+      flex-direction: row
+      justify-content: space-evenly
+      align-items: center
+
+    @media (max-width: 830px)
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+
+    
+    
+    .brancard
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      width: 350px
+      height: 130px
+      border: 1px solid grey
+      border-radius: 5px
+      background: white
+      margin-bottom: 25px
+      line-height: 25px
+      
+      &:hover  
+        cursor: pointer
+        box-shadow: 0px 5px 42px -1px rgba(20, 24, 142, 1)
+
+      h3
+        margin-top: 10px
+        margin-left: 20px
+        font-size: 20px
+        
+
+        img
+          height: 20px
+          vertical-align: top
+          padding-right: 5px
+
+      p
+        padding-top: 25px
+        color: grey  
+        padding-left: 20px
+
+      img
+        height: 40px
+        
+
+        
+    
+            
+        
+        
+
+          
+      
+
+      
