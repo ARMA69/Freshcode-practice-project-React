@@ -18,6 +18,7 @@ import ContestCreationPage from './pages/ContestCreation/ContestCreationPage';
 import CONSTANTS from './constants';
 import browserHistory from './browserHistory';
 import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatContainer';
+import Price from './components/Price/Price';
 
 class App extends Component {
   render() {
@@ -36,10 +37,23 @@ class App extends Component {
         />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/login" component={OnlyNotAuthorizedUserHoc(LoginPage)} />
-          <Route exact path="/registration" component={OnlyNotAuthorizedUserHoc(RegistrationPage)} />
+          <Route path="/squadhelp-pricing" component={Price} />
+          <Route
+            exact
+            path="/login"
+            component={OnlyNotAuthorizedUserHoc(LoginPage)}
+          />
+          <Route
+            exact
+            path="/registration"
+            component={OnlyNotAuthorizedUserHoc(RegistrationPage)}
+          />
           <Route exact path="/payment" component={PrivateHoc(Payment)} />
-          <Route exact path="/startContest" component={PrivateHoc(StartContestPage)} />
+          <Route
+            exact
+            path="/startContest"
+            component={PrivateHoc(StartContestPage)}
+          />
           <Route
             exact
             path="/startContest/nameContest"
@@ -65,8 +79,13 @@ class App extends Component {
             })}
           />
           <Route exact path="/dashboard" component={PrivateHoc(Dashboard)} />
-          <Route exact path="/contest/:id" component={PrivateHoc(ContestPage)} />
+          <Route
+            exact
+            path="/contest/:id"
+            component={PrivateHoc(ContestPage)}
+          />
           <Route exact path="/account" component={PrivateHoc(UserProfile)} />
+
           <Route component={NotFound} />
         </Switch>
         <ChatContainer />
